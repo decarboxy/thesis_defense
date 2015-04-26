@@ -1,25 +1,17 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>Development of Novel Methods for Computational Protein-Ligand Docking</title>
-
 		<meta name="description" content="Development of Novel Methods for Computational Protein-Ligand Docking">
 		<meta name="author" content="Sam DeLuca">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -28,105 +20,116 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<h2>Development of Novel Methods for Computational Protein-Ligand Docking</h2>
 					<h4>Sam DeLuca</h4>
 				</section>
-
 				<section>
-					<h2>Drug discovery 101</h2>
-					
-					<section style="text-align: left;">
-						<h2>The Pipeline</h2>
-						<p>
-							<!-- what is the pipeline -->
-						</p>
-					</section>
-				
-					<section style="text-align: left;">
-						<h2>The Pharmacopia is small</h2>
-						<p>
-							<!-- how small -->
-						</p>
-					</section>
-				
-					<section style="text-align: left;">
-						<h2>Chemical space is very large</h2>
-						<p>
-							<!-- how large, what is the problem -->
-						</p>
-					</section>
-				
-					<section style="text-align: left;">
-						<h2>"Fail Early"</h2>
-						<p>
-							<!-- failing in the earliest stages of drug discovery is better -->
-						</p>
-					</section>
-				
-
+					<h2>The Drug Discovery Pipeline</h2>
+					<p>
+						<img src="images/pipeline-animation.png"
+						width="500"
+						alt="A schematic overview of the drug discovery pipeline">
+					</p>
+					<p class="citation">
+						<a href=http://www.ncats.nih.gov/research/reengineering/process.html>
+						http://www.ncats.nih.gov/research/reengineering/process.html</a>
+					</p>
 				</section>
 				
-				<section> 
-					<h2>The Rosetta modeling suite</h2>
+				<section>
+					<h2>Developing new drugs is hard</h2>
+					<p>
+					<img width=600 src="images/ndes.svg">
+					</p>
+					<p>
+						<ul>
+							<li>1527 New Molecular Entities 1940-2011</li>
+							<li>average of 21 NMEs/year</li>
+						</ul>
+					</p>
+					<p class="citation">
+						<a href="http://www.fda.gov/AboutFDA/WhatWeDo/History/ProductRegulation/SummaryofNDAApprovalsReceipts1938tothepresent/default.htm">
+							http://www.fda.gov/AboutFDA/WhatWeDo/History/ProductRegulation/SummaryofNDAApprovalsReceipts1938tothepresent/default.htm
+						</a>
+					</p>
+				</section>
+			
+				<section>
+					<h2>The Rosetta Molecular Modeling Suite</h2>
 					
-					<section style="text-align: left;">
-						<h2>History</h2>
-						
-						<!-- Where did we come from -->
-						
-					</section>
-					
-					<section style="text-align: left;">
-						<h2>Scoring Function</h2>
-						
-						<!-- How does the scoring funciton work -->
-						
-					</section>
-					
-					<section style="text-align: left;">
-						<h2>How Rosetta Represents Proteins</h2>
-						
-						<!-- Internal Coordinates -->
-						
-					</section>
+					<p>
+						<ul>
+							<li>Originally a protein folding tool</li>
+							<li>Expanded to protein design, protein-protein docking, protein ligand docking</li>
+							<li>An extensible collection of tools for manipulating and scoring large molecules</li>
+						</ul>
+					</p>
 					
 				</section>
 				
 				<section>
-					<h2>RosettaLigand</h2>
+					<h2>Knowledge Based Potentials</h2>
 					
-					<section style="text-align: left;">
-						<h2>History</h2>
-						
-						<!-- Where did we come from -->
-						
-					</section>
+					<p>
+						<img src="images/Knowledge_based_potential.png"
+							width="600"
+							alt="A schematic overview of the drug discovery pipeline">
+					</p>
+					<p>
+						<ul>
+							<li>Statistically derived energy functions</li>
+							<li>Capable of indirectly representing complex chemical properties</li>
+							<li>Rosetta energy function is primary knowledge based</li>
+						</ul>
+					</p>
 					
-					<section style="text-align:left;">
-						<h2>Docking algorithm</h2>
-					</section>
-					<section style="text-align:left;">
-						<h2>Docking algorithm - Initial Placement</h2>
-					</section>
-					<section style="text-align:left;">
-						<h2>Docking algorithm - Refinement</h2>
-					</section>
-					<section style="text-align:left;">
-						<h2>successes and limitations</h2>
-					</section>
+				</section>
+				
+					
+				<section>
+					<h2>A brief history of RosettaLigand</h2>
+					
+					<ul>
+						<li>Originally developed in 2006 (Meiler and Baker)</li>
+						<li>Extended to allow protein flexibility in 2008 (Davis and Baker)</li>
+						<li>Redesigned for modularity and multiple ligand support in 2012 (Davis and Baker)</li>
+					</ul>
+
+					<aside class="notes">
+						Primarily uses Rosetta scoring function and motion primitives
+					</aside>
+					
+				</section>
+
+				<section>
+					<h2>RosettaLigand </h2>
+				</section>
+				
+				<section>
+					<h2>RosettaLigand: Docking algorithm</h2>
+
+					<ul>
+						<li></li>
+					</ul>
+
+				</section>
+				<section style="text-align:left;">
+					<h2>Docking algorithm - Initial Placement</h2>
+				</section>
+				<section style="text-align:left;">
+					<h2>Docking algorithm - Refinement</h2>
+				</section>
+				<section style="text-align:left;">
+					<h2>successes and limitations</h2>
 				</section>
 				
 				<section>
@@ -168,25 +171,20 @@
 				</section>
 				
 				<!-- Slides end here-->
-
 			</div>
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
 		<script>
-
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: false,
 				progress: true,
+				slideNumber: true,
 				history: true,
 				center: true,
-
 				transition: 'none', // none/fade/slide/convex/concave/zoom
-
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -197,8 +195,6 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
