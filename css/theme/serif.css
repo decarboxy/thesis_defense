@@ -258,4 +258,10 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #51483D; }
+  color: #000;
+  opacity: 1.0;
+  font-size: 16px; }
+
+.reveal .citation {
+  font-size: 16px;
+}
