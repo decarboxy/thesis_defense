@@ -1,0 +1,5 @@
+digraph G {
+	init [label="Initial Placement" shape="box"]
+	refine [label="Refinement" shape="box"]
+	
+}

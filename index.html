@@ -46,14 +46,15 @@
 				</section>
 				
 				<section>
-					<h2>Developing new drugs is hard</h2>
+					<h2>Developing new drugs is challenging</h2>
 					<p>
 					<img width=600 src="images/ndes.svg">
 					</p>
 					<p>
 						<ul>
-							<li>1527 New Molecular Entities 1940-2011</li>
-							<li>average of 21 NMEs/year</li>
+							<li>1527 New Drug Entities 1940-2011</li>
+							<li>Average of 21 NDEs/year</li>
+							<li>New approved drugs cost ~$2.6B</li>
 						</ul>
 					</p>
 					<p class="citation">
@@ -111,64 +112,234 @@
 				</section>
 
 				<section>
-					<h2>RosettaLigand </h2>
+					<h2>Ligand Docking is inconsistantly successful</h2>
+					<p>
+						<img src="images/davis_comparison.jpg" height="288" width="450">
+
+					</p>
+					<p>
+						<ul>
+							<li>Most ligand docking tools work in some cases</li>
+						</ul>
+					</p>
+					<p class="citation">
+					Davis et al. (2009). Protein Science. <a href="http://dx.doi.org/10.1002/pro.192">doi:10.1002/pro.192</a>
+					</p>
+
 				</section>
 				
 				<section>
-					<h2>RosettaLigand: Docking algorithm</h2>
+					<h2>RosettaLigand: Docking Protocol</h2>
+					<p>
+						<ol>
+							<li>Initial Placement</li>
+							<li>Refinement</li>
+							<li>Minimization</li>
+						</ol>
+					</p>
 
-					<ul>
-						<li></li>
-					</ul>
 
 				</section>
-				<section style="text-align:left;">
-					<h2>Docking algorithm - Initial Placement</h2>
+				<section>
+					<h2>RosettaLigand: Initial Placement Scoring</h2>
+					<p>
+						<img src="images/binary_grid.svg", width=400>
+					</p>
+
 				</section>
-				<section style="text-align:left;">
-					<h2>Docking algorithm - Refinement</h2>
+				<section>
+					<h2>RosettaLigand: Initial Placement Sampling</h2>
+					<p>
+						Grid energy function
+						<ol>
+							<li>Translate &mdash; Translate ligand to a non-clashing position</li>
+							<li>Rotate &mdash; Collect diverse rotations, select random non-clashing rotation</li>
+							<li>Slide Together &mdash; Slide ligand toward center of protein till contact is made</li>
+						</ol>
+					</p>
 				</section>
-				<section style="text-align:left;">
-					<h2>successes and limitations</h2>
+				<section>
+					<h2>RosettaLigand: Refinement and minimization</h2>
+					<p>
+						Rosetta energy function
+						<ol>
+							<li>Alternating rounds of repacking and small ligand perturbation</li>
+							<li>Minimization of entire complex</li>
+						</ol>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Improving RosettaLigand Sampling</h2>
+					<p class="fragment">
+						Original RosettaLigand Initial Placement
+						<img src="images/transrot_schematic.svg" width="600">
+					</p>
+					<p class="fragment">
+						New RosettaLigand Initial Placement
+						<img src="images/transform_schematic.svg" width="500">
+					</p>
 				</section>
 				
 				<section>
 					<h2>Improving RosettaLigand Performance</h2>
-					
-					<section style="text-align:left;">
-						<h2>monte carlo sampling initial conformations</h2>
-					</section>
-					
-					<section style="text-align:left;">
-						<h2>Impact of monte carlo sampling on initial placement</h2>
-					</section>
-					
-					<section style="text-align:left;">
-						<h2>Impact of monte carlo sampling on post-refinement results</h2>
-					</section>
-					
-					<section style="text-align:left;">
-						<h2>UltraLightResidue</h2>
-					</section>
-					
-					<section style="text-align:left;">
-						<h2>The new "Transform" method improves success rate and efficiency</h2>
-					</section>
+					<p>
+						<ul>
+							<li>Profile code to identify rate limiting steps</li>
+							<li>Single slowest step was internal to Cartesian coordinate conversion</li>
+							<li>Rosetta performs rotations in internal coordinate space</li>
+							<li>RosettaLigand in initial placement grid is in cartesian space</li>
+						</ul>
+					</p>
 					
 				</section>
-				
 				<section>
-					<h2>Developing new initial placement scoring functions</h2>
-					
-					<section style="text-align:left;">
-						<h2>The ScoringGrid framework</h2>
-					</section>
-					
-					<section style="text-align:left;">
-						<h2>a KBP for </h2>
-					</section>
-					
+					<h2>Internal Coordinate Space</h2>
+					<p>
+						<img src="images/peptide_bond.jpg" width="600">
+					</p>
+					<p class="citation">
+						<a href="https://acbr12.wordpress.com/tag/peptide/">
+						https://acbr12.wordpress.com/tag/peptide/</a>
+					</p>
+					<p>
+						<ul>
+							<li>Rosetta was optimized for large molecules</li>
+							<li>General pattern: frequent internal coordinate changes, infrequent Cartesian lookup</li>
+							<li>RosettaLigand initial placement: Cartesian lookup after every moves</li>
+						</ul>
+					</p>
 				</section>
+				<section>
+					<h2>Optimizing Ligand Rotation computations</h2>
+					<p>
+						<ul>
+							<li>C++ compilers optimize the code you write</li>
+							<li>They're better at this than you are</li>
+							<li>Sometimes they need help</li>
+							<li>RosettaLigand stores atoms in a Tree</li>
+							<li>Atoms are not necessarily adjacent in memory</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Optimizing residue storage for transformations</h2>
+					<p>
+					<table >
+						<th>x</th>
+						<th>y</th>
+						<th>z</th>
+						<tr>
+							<td>53.253</td> 
+							<td>74.275</td>
+							<td>11.685</td>
+						</tr>
+						<tr>
+							<td>52.912</td> 
+							<td>73.873</td>
+							<td>11.553</td>
+						</tr>
+						<tr>
+							<td>...</td> 
+							<td>...</td>
+							<td>...</td>
+						</tr>
+					</table>
+					</p>
+					<p>
+						<ul>
+							<li>Contiguous array of residue coords</li>
+							<li>Reference to original residue</li>
+							<li>Internal &#8596; Cartesian conversion only twice</li>
+							<li>Compiler can properly optimize rotation operations</li>
+						</ul>
+					</p>
+					<aside class="notes">
+						SSE SIMD, streaming, etc
+					</aside>
+				</section>
+
+				<section>
+					<h2>Comparing the new and old sampling methods</h2>
+					<img src="images/protocol_flowchart.svg", width=500>
+				</section>
+
+				<section>
+					<h2>Protocol Terminology</h2>
+					<ul>
+						<li>
+							<span class="protocol">TransRot</span> &mdash; Original initial placement protocol
+						</li>
+						<li>
+							<span class="protocol">Transform</span> &mdash; New initial placement protocol
+						</li>
+						<li>MCM &mdash; Alternating rounds of perturbation and repacking refinement</li>
+						<li>MIN &mdash; Minimization only refinement</li>
+					</ul> 
+				</section>
+
+				<section>
+					<h2>Setting up a high quality benchmark</h2>
+					<p>
+					</p>
+					<ul>
+						<li>Community Structure Activity Resource</li>
+						<li>43 Protein subset of CSAR, excluding
+							<ul>
+								<li>co-factors</li>
+								<li>metal ions</li>
+								<li>structural waters</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2><span class="protocol">Transform</span> improves sampling speed</h2>
+					<p>
+						<img src="images/timing_distribution.svg" width=600>
+					</p>
+					<aside class="notes">
+						<ul>
+							<li>Transrot/mcm - 49.4 s</li>
+							<li>Transrot/min - 33.3 s</li>
+							<li>Transform/min - 9.3 s</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2><span class="protocol">Transform</span> improves probability of success</h2>
+					<p>
+						<img src="images/sampling_distribution.svg" width=500>
+					</p>
+					<aside class="notes">
+						<ul>
+							<li>Transform -- 7%</li>
+							<li>Transrot -- 0.16%</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2><span class="protocol">Transform</span> improves benchmark success rate</h2>
+					<p>
+						<img src="images/transform_transrot_time.svg", width=850>
+					</p>
+				</section>
+
+				<section>
+					<h2><span class="protocol">Transform</span> improves benchmark success rate</h2>
+					<p>
+						<img src="images/transform_transrot_count.svg", width=850>
+					</p>
+				</section>
+
+				<!-- TODO maybe add more from that paper -->
+
+				
+
+
 				
 				<!-- Slides end here-->
 			</div>

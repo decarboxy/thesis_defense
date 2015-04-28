@@ -137,6 +137,10 @@ body {
 .reveal code {
   font-family: monospace; }
 
+.reveal .protocol {
+  font-variant: small-caps;
+}
+
 .reveal pre code {
   display: block;
   padding: 5px;
