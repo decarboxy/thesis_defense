@@ -337,9 +337,63 @@
 
 				<!-- TODO maybe add more from that paper -->
 
-				
+				<section>
+					<h2>GridManager: framework for managing scoring grids</h2>
+					<p>
+						<img src="images/gridmanager.svg" width=600>
+					</p>
+				</section>
 
+				<section>
+					<h2>Shape complementarity KBP</h2>
+					<p>
+						<img src="images/shape_complementarity.svg" width=600>
+					</p>
+				</section>
 
+				<section>
+					<h2>Hydrogen bonding KBP</h2>
+					<p>
+						<img src="images/hydrogen_bonding.svg" width=600>
+					</p>
+				</section>
+
+				<section>
+					<h2>3-D environment KBP</h2>
+					<p>
+						<ul>
+							<li>Set of 20 KBPs</li>
+							<li>Bins based on distance and 2 angles
+								<ul>
+									<li>Distance &mdash; Query-Cβ</li>
+									<li>Θ angle &mdash; Query-Cβ-Cα</li>
+									<li>Φ angle &mdash; Hα-Cα-Cγ-Query</li>
+								</ul>
+							</li>
+							<li>Grid score is Sum of KBPs</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Protocol Terminology</h2>
+					<ul>
+						<li>
+							<span class="protocol">TransRot</span> &mdash; Original initial placement protocol
+						</li>
+						<li>
+							<span class="protocol">Transform</span> &mdash; New initial placement protocol
+						</li>
+						<li>MCM &mdash; Alternating rounds of perturbation and repacking refinement</li>
+						<li>MIN &mdash; Minimization only refinement</li>
+						<li>3-D &mdash; 3-D environment KBP</li>
+						<li>1-D &mdash; Shape + H-Bond KBPs</li>
+					</ul> 
+				</section>
+
+				<section>
+					<h2>A more challenging benchmark</h2>
+				</section>
 				
 				<!-- Slides end here-->
 			</div>
