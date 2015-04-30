@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- math -->
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -63,6 +65,23 @@
 						</a>
 					</p>
 				</section>
+
+				<section>
+					<h2>Ligand Docking is inconsistantly successful</h2>
+					<p>
+						<img src="images/davis_comparison.jpg" height="288" width="450">
+
+					</p>
+					<p>
+						<ul>
+							<li>Most ligand docking tools work in some cases</li>
+						</ul>
+					</p>
+					<p class="citation">
+					Davis et al. (2009). Protein Science. <a href="http://dx.doi.org/10.1002/pro.192">doi:10.1002/pro.192</a>
+					</p>
+
+				</section>
 			
 				<section>
 					<h2>The Rosetta Molecular Modeling Suite</h2>
@@ -109,23 +128,6 @@
 						Primarily uses Rosetta scoring function and motion primitives
 					</aside>
 					
-				</section>
-
-				<section>
-					<h2>Ligand Docking is inconsistantly successful</h2>
-					<p>
-						<img src="images/davis_comparison.jpg" height="288" width="450">
-
-					</p>
-					<p>
-						<ul>
-							<li>Most ligand docking tools work in some cases</li>
-						</ul>
-					</p>
-					<p class="citation">
-					Davis et al. (2009). Protein Science. <a href="http://dx.doi.org/10.1002/pro.192">doi:10.1002/pro.192</a>
-					</p>
-
 				</section>
 				
 				<section>
@@ -392,9 +394,166 @@
 				</section>
 
 				<section>
-					<h2>A more challenging benchmark</h2>
+					<h2>Q-Dock: A more challenging benchmark</h2>
+					<ul>
+						<li>154 Ligands-Comparative model pairs (1.4-24.0 Å RMSD)</li>
+						<li>10 low scoring relaxed models per complex</li>
+						<li>Intrinsically more challenging than CSAR</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>New scoring grids do not improve success rate</h2>
+					<p>
+						<img src="images/fraction_near_hit_qdock.svg" width=800>
+					</p>
+				</section>
+
+				<section>
+					<h2>Minimal difference in performance from grids</h2>
+					<p>
+						<img src="images/qdock_rms_rms.svg", width=450>
+					</p>
+				</section>
+
+				<section>
+					<h2><span class="protocol">Transform</span> improves symmetric ligand performance</h2>
+					<p>
+						<img src="images/topleft_gallery.png"  width="450">
+					</p>
+				</section>
+
+				<section>
+					<h2>3-D KBP may improve small ligand performance</h2>
+					<p>
+						<img src="images/botright_gallery.png" width=450>
+					</p>
+				</section>
+
+				<section>
+					<h2>No categorical difference between success and failure</h2>
+					<p>
+						ligand properties
+					</p>
+					<p>
+						<img src="images/mcm_parameters.svg", width=600>
+					</p>
+				</section>
+
+				<section>
+					<h2>No categorical difference between success and failure</h2>
+					<p>
+						ligand properties
+					</p>
+					<p>
+						<img src="images/mcm_parameters.svg", width=600>
+					</p>
+				</section>
+				<section>
+					<h2>No categorical difference between success and failure</h2>
+					<p>
+						protein properties
+					</p>
+					<p>
+						<img src="images/mcm_protein_descriptors.svg", width=800>
+					</p>
+				</section>
+
+				<section>
+					<h2>1-D KBPs for hand-docking in FoldIt</h2>
+					<p>
+						<video data-autoplay src="images/foldit.mov" width=600></video>
+					</p>
+				</section>
+
+				<section>
+					<h2>Rescoring docking results with ANNs</h2>
+					<p>
+						<ul>
+							<li>Generalized Neural Networks are challenging</li>
+							<li>We have both structure and ligand information</li>
+							<li>Descriptors based on RosettaLigand scores</li>
+						</ul>
+					</p>
+					<aside class="notes">
+						I'm not the first person to have done this. NNScore/NNSCore2 have done it. everyone has trouble generalizing
+					</aside>
 				</section>
 				
+
+				<section>
+					<h2>ANN Descriptors</h2>
+					<p>
+						<ul>
+							<li>13 RosettaLigand interface components</li>
+							<li>7 Interface descriptors (SASA, packstat, etc)</li>
+							<li>10 Scalar Ligand descriptors</li>
+							<li>288 Rosetta Radial Distribution Function (RDF) columns 
+								<p>
+									$$g(r) = \sum_{\substack{i,j}}score_{ij}e^{-B(r-r_{ij})^{2}}$$
+								</p>
+							</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Tools for Screening</h2>
+					<p>
+						<ul>
+							<li>Bulk Parameterization
+								<ul>
+									<li>Create ligand conformers</li>
+									<li>Generate Rosetta parameter files</li>
+									<li>Attach experimetnal data</li>
+								</ul>
+							</li>
+							<li>Screening Job Inputter
+								<ul>
+									<li>Automated cross-docking</li>
+									<li>Large screens can be split into small chunks</li>
+								</ul>
+							</li>
+							<li>SQL output
+								<ul>
+									<li>Relational database storage of models</li>
+									<li>Online filtering by score</li>
+									<li>Tracking of protocols parameters</li>
+								</ul>
+							</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Training and benchmarking data</h2>
+					<ul>
+						<li>High quality training sets are hard to come by</li>
+						<li>Training: 120 proteins-ligand complexes from PDBbind, crossdocked</li>
+						<li>Benchmarking: DEKOIS 2.0: 80 proteins, 16,080 ligands</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Cross-Validation performance</h2>
+					<p>
+						<img src="images/lipinski_tpr_plot.svg" width=400>
+					</p>
+				</section>
+
+				<section>
+					<h2>Benchmarking performance</h2>
+					<p>
+						<img src="images/tpr_fpr_overall.svg" width=500>
+					</p>
+				</section>
+
+				<section>
+					<h2>No categorical difference between success and failure</h2>
+					<img src="images/dekois_ligand_properties.svg" width="800">
+				</section>
+
+
 				<!-- Slides end here-->
 			</div>
 		</div>
