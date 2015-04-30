@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<!-- math -->
 		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -67,7 +68,7 @@
 				</section>
 
 				<section>
-					<h2>Ligand Docking is inconsistantly successful</h2>
+					<h2>Ligand docking is inconsistantly successful</h2>
 					<p>
 						<img src="images/davis_comparison.jpg" height="288" width="450">
 
@@ -84,7 +85,7 @@
 				</section>
 			
 				<section>
-					<h2>The Rosetta Molecular Modeling Suite</h2>
+					<h2>The Rosetta molecular modeling suite</h2>
 					
 					<p>
 						<ul>
@@ -97,7 +98,7 @@
 				</section>
 				
 				<section>
-					<h2>Knowledge Based Potentials</h2>
+					<h2>Knowledge based potentials</h2>
 					
 					<p>
 						<img src="images/Knowledge_based_potential.png"
@@ -131,7 +132,7 @@
 				</section>
 				
 				<section>
-					<h2>RosettaLigand: Docking Protocol</h2>
+					<h2>RosettaLigand: Docking protocol</h2>
 					<p>
 						<ol>
 							<li>Initial Placement</li>
@@ -143,14 +144,14 @@
 
 				</section>
 				<section>
-					<h2>RosettaLigand: Initial Placement Scoring</h2>
+					<h2>RosettaLigand: Initial placement scoring</h2>
 					<p>
 						<img src="images/binary_grid.svg", width=400>
 					</p>
 
 				</section>
 				<section>
-					<h2>RosettaLigand: Initial Placement Sampling</h2>
+					<h2>RosettaLigand: Initial placement sampling</h2>
 					<p>
 						Grid energy function
 						<ol>
@@ -173,7 +174,7 @@
 				
 				<section>
 					<h2>Improving RosettaLigand Sampling</h2>
-					<p class="fragment">
+					<p>
 						Original RosettaLigand Initial Placement
 						<img src="images/transrot_schematic.svg" width="600">
 					</p>
@@ -184,19 +185,19 @@
 				</section>
 				
 				<section>
-					<h2>Improving RosettaLigand Performance</h2>
+					<h2>Improving RosettaLigand performance</h2>
 					<p>
 						<ul>
 							<li>Profile code to identify rate limiting steps</li>
 							<li>Single slowest step was internal to Cartesian coordinate conversion</li>
 							<li>Rosetta performs rotations in internal coordinate space</li>
-							<li>RosettaLigand in initial placement grid is in cartesian space</li>
+							<li>RosettaLigand initial placement grid is in cartesian space</li>
 						</ul>
 					</p>
 					
 				</section>
 				<section>
-					<h2>Internal Coordinate Space</h2>
+					<h2>Internal coordinate space</h2>
 					<p>
 						<img src="images/peptide_bond.jpg" width="600">
 					</p>
@@ -206,20 +207,23 @@
 					</p>
 					<p>
 						<ul>
-							<li>Rosetta was optimized for large molecules</li>
-							<li>General pattern: frequent internal coordinate changes, infrequent Cartesian lookup</li>
-							<li>RosettaLigand initial placement: Cartesian lookup after every moves</li>
+							<li>Rosetta was optimized for:
+							<ul>
+								<li>Large molecules</li>
+								<li>Frequent internal coordinate changes, infrequent Cartesian lookup</li>
+							</ul>
+							<li>RosettaLigand initial placement: Cartesian lookup after every move</li>
 						</ul>
 					</p>
 				</section>
 				<section>
-					<h2>Optimizing Ligand Rotation computations</h2>
+					<h2>Optimizing ligand rotation computations</h2>
 					<p>
 						<ul>
 							<li>C++ compilers optimize the code you write</li>
 							<li>They're better at this than you are</li>
 							<li>Sometimes they need help</li>
-							<li>RosettaLigand stores atoms in a Tree</li>
+							<li>RosettaLigand stores atoms in a tree</li>
 							<li>Atoms are not necessarily adjacent in memory</li>
 						</ul>
 					</p>
@@ -267,7 +271,7 @@
 				</section>
 
 				<section>
-					<h2>Protocol Terminology</h2>
+					<h2>Protocol terminology</h2>
 					<ul>
 						<li>
 							<span class="protocol">TransRot</span> &mdash; Original initial placement protocol
@@ -378,7 +382,7 @@
 				</section>
 
 				<section>
-					<h2>Protocol Terminology</h2>
+					<h2>Protocol terminology</h2>
 					<ul>
 						<li>
 							<span class="protocol">TransRot</span> &mdash; Original initial placement protocol
@@ -551,6 +555,101 @@
 				<section>
 					<h2>No categorical difference between success and failure</h2>
 					<img src="images/dekois_ligand_properties.svg" width="800">
+				</section>
+
+				<section>
+					<h2>Future Directions</h2>
+					<p>
+						<ul>
+							<li>RosettaLigand Improvements
+								<ul>
+									<li>Investigate new sampling algorithms</li>
+									<li>2-D version of 3-D KBP grid</li>
+									<li>"Deep sampling" to map energy function</li>
+									<li>Implement Gasteiger atom-typing and orbital energy function</li>
+								</ul>
+							</li>
+							<li>Machine Learning Integration
+								<ul>
+									<li>Establish larger training set</li>
+									<li>Rigerous optimization of network parameters</li>
+									<li>Implement less noisy descriptors</li>
+									<li>Evaluate other ML methods</li>
+								</ul>
+							</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Acknowledgements</h2>
+					<p>
+						<ul>
+							<li>Thesis Committee: Jens Meiler, Brian Bachmann, Heidi Hamm, Stephen Fesik, Terry Lybrand</li>
+							<li>Stephanie DeLuca</li>
+							<li>Steven Combs</li>
+							<li>Kristian Kaufmann</li>
+							<li>Will Lowe</li>
+							<li>Matt O'Meara</li>
+							<li>Brian Weitzner</li>
+							<li>The Meiler lab</li>
+							<li>The RosettaCommons</li>
+						</ul>
+					</p>
+				</section>
+			 	<!--
+				<section>
+					<h2>Acknowledgements</h2>
+				</section>
+
+				<section>
+					<h2>Stephanie DeLuca</h2>
+					<img src="images/acknowledgements/steph1.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/steph2.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/steph3.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/steph4.jpg" height="500">
+				</section>
+
+				<section>
+					<h2>Family</h2>
+					<img src="images/acknowledgements/group1.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/group2.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/family1.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/callisto.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/family2.jpg" height="500">
+				</section>
+				<section>
+					<img src="images/acknowledgements/family3.jpg" height="500">
+				</section>
+				<section>Friends</section>
+				<section>
+					<h2>The Meiler Lab</h2>
+					<img src="images/acknowledgements/lab.jpg">
+				</section>
+				<section>
+					<h2>CloudLock</h2>
+					<img src="images/acknowledgements/cloudlock.jpg">
+				</section>
+				-->
+
+
+
+				<section>
+					<h2>Questions?</h2>
 				</section>
 
 
