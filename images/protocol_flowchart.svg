@@ -10,131 +10,131 @@
 <g>
 	<g>
 		<rect x="304" y="22.385" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="60"/>
-		<text transform="matrix(1 0 0 1 395.3398 46.2559)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="20">Ligand</tspan><tspan x="-29.709" y="24" font-family="'MyriadPro-Regular'" font-size="20">Conformation</tspan></text>
+		<text transform="matrix(1 0 0 1 381.0107 61.1895)" font-family="'MyriadPro-Regular'" font-size="30">Ligand</text>
 	</g>
 	<g>
 		<rect x="582" y="22.385" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="60"/>
-		<text transform="matrix(1 0 0 1 671.7109 46.2559)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="20">Protein</tspan><tspan x="-28.08" y="24" font-family="'MyriadPro-Regular'" font-size="20">Conformation</tspan></text>
+		<text transform="matrix(1 0 0 1 657.0449 61.1895)" font-family="'MyriadPro-Regular'" font-size="30">Protein</text>
 	</g>
 </g>
-<line fill="none" stroke="#000000" stroke-width="2" x1="424" y1="82.385" x2="424" y2="115.815"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="702" y1="82.385" x2="702" y2="115.812"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="424" y1="114.82" x2="702" y2="114.82"/>
+<line fill="none" stroke="#000000" stroke-width="4" x1="424" y1="82.385" x2="424" y2="115.815"/>
+<line fill="none" stroke="#000000" stroke-width="4" x1="702" y1="82.385" x2="702" y2="115.812"/>
+<line fill="none" stroke="#000000" stroke-width="4" x1="424" y1="114.82" x2="702" y2="114.82"/>
 <g>
 	<rect x="197.834" y="318.225" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="239.999" height="59.999"/>
-	<text transform="matrix(1 0 0 1 275.2539 354.0947)" font-family="'MyriadPro-Regular'" font-size="20">Transform</text>
+	<text transform="matrix(1 0 0 1 254.8486 357.0293)" font-family="'MyriadPro-Regular'" font-size="30">Transform</text>
 </g>
 <g>
 	<rect x="756.75" y="599.742" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240.001" height="60"/>
-	<text transform="matrix(1 0 0 1 821.8311 623.6133)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="20">Dock/Repack</tspan><tspan x="28.5" y="24" font-family="'MyriadPro-Regular'" font-size="20">Cycles</tspan></text>
+	<text transform="matrix(1 0 0 1 779.1777 638.5469)" font-family="'MyriadPro-Regular'" font-size="30">Perturb/Repack</text>
 </g>
 <g>
 	<g>
-		<rect x="443.01" y="781.349" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="59.999"/>
-		<text transform="matrix(1 0 0 1 508.2793 817.2188)" font-family="'MyriadPro-Regular'" font-size="20">Minimization</text>
+		<rect x="443.01" y="781.349" fill="#FFFFFF" stroke="#000000" stroke-width="3" width="240" height="59.999"/>
+		<text transform="matrix(1 0 0 1 480.7812 820.1533)" font-family="'MyriadPro-Regular'" font-size="30">Minimization</text>
 	</g>
 	<g>
-		<rect x="443.01" y="902.088" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="59.998"/>
-		<text transform="matrix(1 0 0 1 531.3701 937.958)" font-family="'MyriadPro-Regular'" font-size="20">Scoring</text>
+		<rect x="443.01" y="902.088" fill="#FFFFFF" stroke="#000000" stroke-width="3" width="240" height="59.998"/>
+		<text transform="matrix(1 0 0 1 515.4751 940.8916)" font-family="'MyriadPro-Regular'" font-size="30">Scoring</text>
 	</g>
 	<g>
 		<g>
-			<line fill="none" stroke="#000000" stroke-width="2" x1="563.01" y1="841.348" x2="563.01" y2="889.211"/>
-			<path d="M563.01,901.281c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
+			<line fill="none" stroke="#000000" stroke-width="3" x1="563.01" y1="841.348" x2="563.01" y2="889.211"/>
+			<path d="M563.01,901.281c-2.106-5.681-5.703-12.728-9.51-17.094l9.51,3.438l9.51-3.438
 				C568.713,888.555,565.116,895.602,563.01,901.281z"/>
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 -135.1157 -390)" font-family="'MyriadPro-Regular'" font-size="25">A</text>
+<text transform="matrix(1 0 0 1 -135.1152 -390)" font-family="'MyriadPro-Regular'" font-size="25">A</text>
 <text transform="matrix(1 0 0 1 431.1094 -390)" font-family="'MyriadPro-Regular'" font-size="25">B</text>
 <g>
 	<rect x="203" y="599.743" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="60"/>
-	<text transform="matrix(1 0 0 1 292.8301 635.6133)" font-family="'MyriadPro-Regular'" font-size="20">Repack</text>
+	<text transform="matrix(1 0 0 1 277.6855 638.5488)" font-family="'MyriadPro-Regular'" font-size="30">Repack</text>
 </g>
 <g>
 	<rect x="751.584" y="197.485" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="59.999"/>
-	<text transform="matrix(1 0 0 1 833.5254 233.3555)" font-family="'MyriadPro-Regular'" font-size="20">Translate</text>
+	<text transform="matrix(1 0 0 1 815.3945 236.2891)" font-family="'MyriadPro-Regular'" font-size="30">Translate</text>
 </g>
 <g>
 	<rect x="751.585" y="318.225" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="239.999" height="59.999"/>
-	<text transform="matrix(1 0 0 1 844.2744 354.0938)" font-family="'MyriadPro-Regular'" font-size="20">Rotate</text>
+	<text transform="matrix(1 0 0 1 830.6953 357.0293)" font-family="'MyriadPro-Regular'" font-size="30">Rotate</text>
 </g>
 <g>
 	<rect x="751.584" y="438.964" fill="#FFFFFF" stroke="#000000" stroke-width="2" width="240" height="59.998"/>
-	<text transform="matrix(1 0 0 1 810.9844 474.834)" font-family="'MyriadPro-Regular'" font-size="20">Slide Together</text>
+	<text transform="matrix(1 0 0 1 782.3652 477.7676)" font-family="'MyriadPro-Regular'" font-size="30">Slide Together</text>
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="257.484" x2="871.584" y2="305.306"/>
+		<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="257.484" x2="871.584" y2="305.306"/>
 		<path d="M871.584,317.376c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
 			C877.287,304.649,873.69,311.696,871.584,317.376z"/>
 	</g>
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="378.224" x2="871.584" y2="425.931"/>
-		<path d="M871.584,438.001c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
+		<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="378.224" x2="871.584" y2="425.931"/>
+		<path d="M871.584,438.001c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.438l9.51-3.438
 			C877.287,425.274,873.69,432.321,871.584,438.001z"/>
 	</g>
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="498.962" x2="871.584" y2="586.979"/>
+		<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="498.962" x2="871.584" y2="586.979"/>
 		<path d="M871.584,599.049c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
 			C877.287,586.322,873.69,593.369,871.584,599.049z"/>
 	</g>
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="317.832" y1="378.224" x2="317.832" y2="586.938"/>
-		<path d="M317.832,599.009c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
+		<line fill="none" stroke="#000000" stroke-width="3" x1="317.832" y1="378.224" x2="317.832" y2="586.938"/>
+		<path d="M317.832,599.009c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.438l9.51-3.438
 			C323.535,586.282,319.938,593.329,317.832,599.009z"/>
 	</g>
 </g>
 <text transform="matrix(1 0 0 1 14 38.4336)" font-family="'MyriadPro-Regular'" font-size="36">Data Input</text>
 <text transform="matrix(1 0 0 1 14 195.4854)" font-family="'MyriadPro-Regular'" font-size="36">Initial Placement</text>
-<line fill="none" stroke="#000000" stroke-width="2" x1="563.02" y1="114.82" x2="563.02" y2="177.104"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="563.02" y1="177.104" x2="872.562" y2="177.104"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="563.02" y1="177.104" x2="317.832" y2="177.104"/>
+<line fill="none" stroke="#000000" stroke-width="4" x1="563.02" y1="114.82" x2="563.02" y2="177.104"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="563.02" y1="177.104" x2="872.562" y2="177.104"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="563.02" y1="177.104" x2="317.832" y2="177.104"/>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="317.832" y1="176.113" x2="317.834" y2="305.306"/>
+		<line fill="none" stroke="#000000" stroke-width="3" x1="317.832" y1="176.113" x2="317.834" y2="305.306"/>
 		<path d="M317.834,317.376c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
 			C323.537,304.649,319.94,311.696,317.834,317.376z"/>
 	</g>
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="177.104" x2="871.584" y2="184.919"/>
+		<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="177.104" x2="871.584" y2="184.919"/>
 		<path d="M871.584,196.989c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439
 			C877.287,184.263,873.69,191.31,871.584,196.989z"/>
 	</g>
 </g>
-<line fill="none" stroke="#000000" stroke-width="2" x1="317.832" y1="659.743" x2="317.832" y2="712.576"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="659.743" x2="871.584" y2="712.576"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="712.576" x2="317.832" y2="712.576"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="317.832" y1="659.743" x2="317.832" y2="712.576"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="659.743" x2="871.584" y2="712.576"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="712.576" x2="317.832" y2="712.576"/>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="563" y1="712.576" x2="563" y2="768.565"/>
+		<line fill="none" stroke="#000000" stroke-width="3" x1="563" y1="712.576" x2="563" y2="768.565"/>
 		<path d="M563,780.636c-2.107-5.68-5.703-12.727-9.51-17.094l9.51,3.439l9.51-3.439C568.703,767.909,565.106,774.956,563,780.636z"
 			/>
 	</g>
 </g>
-<line fill="none" stroke="#000000" stroke-width="2" x1="317.832" y1="468.964" x2="689.892" y2="468.964"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="871.584" y1="542.971" x2="508.199" y2="542.971"/>
-<line fill="none" stroke="#000000" stroke-width="2" x1="508.199" y1="541.969" x2="508.199" y2="630.734"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="317.832" y1="468.964" x2="689.892" y2="468.964"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="871.584" y1="542.971" x2="508.199" y2="542.971"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="508.199" y1="541.969" x2="508.199" y2="630.734"/>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="508.199" y1="629.743" x2="455.912" y2="629.743"/>
-		<path d="M443.842,629.743c5.68-2.107,12.727-5.703,17.094-9.51l-3.439,9.51l3.439,9.51
+		<line fill="none" stroke="#000000" stroke-width="3" x1="508.199" y1="629.743" x2="455.912" y2="629.743"/>
+		<path d="M443.842,629.743c5.681-2.107,12.728-5.703,17.094-9.51l-3.438,9.51l3.438,9.51
 			C456.568,635.446,449.521,631.85,443.842,629.743z"/>
 	</g>
 </g>
-<line fill="none" stroke="#000000" stroke-width="2" x1="689.892" y1="467.992" x2="689.892" y2="629.743"/>
+<line fill="none" stroke="#000000" stroke-width="3" x1="689.892" y1="467.992" x2="689.892" y2="629.743"/>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" x1="688.89" y1="629.743" x2="743.753" y2="629.743"/>
-		<path d="M755.823,629.743c-5.68,2.107-12.727,5.703-17.094,9.51l3.439-9.51l-3.439-9.51
+		<line fill="none" stroke="#000000" stroke-width="3" x1="688.89" y1="629.743" x2="743.753" y2="629.743"/>
+		<path d="M755.823,629.743c-5.681,2.106-12.728,5.703-17.095,9.51l3.439-9.51l-3.439-9.51
 			C743.097,624.04,750.144,627.637,755.823,629.743z"/>
 	</g>
 </g>

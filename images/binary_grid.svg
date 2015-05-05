@@ -4,21 +4,23 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="678px" height="678px" viewBox="0 0 678 678" enable-background="new 0 0 678 678" xml:space="preserve">
 <g>
-	<defs>
-		<rect id="SVGID_1_" width="678" height="678"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  overflow="visible"/>
-	</clipPath>
-	<g clip-path="url(#SVGID_2_)">
+	<g>
 		<defs>
-			<rect id="SVGID_3_" width="678" height="678"/>
+			<rect id="SVGID_1_" width="678" height="678"/>
 		</defs>
-		<clipPath id="SVGID_4_">
-			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
 		</clipPath>
-		
-			<image overflow="visible" clip-path="url(#SVGID_4_)" width="678" height="678" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqYAAAKmCAYAAACfe1yfAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+		<g clip-path="url(#SVGID_2_)">
+			<g>
+				<defs>
+					<rect id="SVGID_3_" width="678" height="678"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_3_"  overflow="visible"/>
+				</clipPath>
+				
+					<image overflow="visible" clip-path="url(#SVGID_4_)" enable-background="new    " width="678" height="678" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqYAAAKmCAYAAACfe1yfAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAA0J1JREFUeNrsnQd4VFXax9/USZtJ
 7yREaUEQsWFDCSr6raIudlGsyK7tW3FdC64LyCeismBBcVFXVl1YxV5WXQuxrDUi0pMACem9zKTX
 774nucPM5M4kmcxM7p35/55nnmTum3vumzN35v7n3PP+jx/1cZ30KKSBZNjZ7mzM1e158ljIHbmj
@@ -957,7 +959,13 @@ p9Sdt851wTEFioUF9dfkxI7UliQ9x1naji8tD0hloMHhcFodjic7nydPnhTb/n7DBvHa2NhINTU1
 Hvv/etcuKi8vJ22ultasXk0nTnztaqeiogIXGYBjCoCSiaURGncqUuX/DfRPTOCkA8XCgvpqk4jy
 y+FOTBbawu4BXYykP1w/PELWC5Nkto9Si31MbEvRaLzaWb9+vXgtKyuj0pISum3dOlq8eLHYdtWV
 V4rgnS+/+MKr3p5/fYXu2LiRPjp2jLKzs3GhgYjz/wIMAMNNF5/Ze43DAAAAAElFTkSuQmCC">
-		</image>
+				</image>
+			</g>
+		</g>
 	</g>
 </g>
+<text transform="matrix(1 0 0 1 303.5 565.5)" font-family="'MyriadPro-Regular'" font-size="32">Favorable</text>
+<text transform="matrix(0.7071 -0.7071 0.7071 0.7071 227.0312 445.4258)" font-family="'MyriadPro-Regular'" font-size="32">Unfavorable</text>
+<path fill="none" d="M126.5,238.5c0-46.43,36.494-84,81.593-84"/>
+<text transform="matrix(0.1688 -0.9856 0.9856 0.1688 125.9678 234.1592)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="32">N</tspan><tspan x="19.978" y="0.143" font-family="'MyriadPro-Regular'" font-size="32" rotate="11.694">e</tspan><tspan x="34.791" y="3.041" font-family="'MyriadPro-Regular'" font-size="32" rotate="22.414">u</tspan><tspan x="50.236" y="9.639" font-family="'MyriadPro-Regular'" font-size="32" rotate="31.46">t</tspan><tspan x="58.764" y="14.817" font-family="'MyriadPro-Regular'" font-size="32" rotate="38.279">r</tspan><tspan x="66.53" y="20.636" font-family="'MyriadPro-Regular'" font-size="32" rotate="46.757">a</tspan><tspan x="76.451" y="31.497" font-family="'MyriadPro-Regular'" font-size="32" rotate="54.402">l</tspan></text>
 </svg>
